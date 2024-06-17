@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Booking Form</h1>
+        <form id="bookingForm">
+            <label for="bookingType">Choice of Booking:</label>
+            <select id="bookingType" name="bookingType" onchange="updateForm()">
+                <option value="">Select</option>
+                <option value="fullDay">Full day booking</option>
+                <option value="halfDay">Half day booking</option>
+                <option value="hourly">Hourly booking</option>
+            </select>
+
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="noOfPersons">No of Persons:</label>
+            <input type="number" id="noOfPersons" name="noOfPersons" required>
+
+            <div id="dateField">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div id="timeField" style="display: none;">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time">
+            </div>
+
+            <div id="slotField" style="display: none;">
+                <label for="slot">Slot:</label>
+                <select id="slot" name="slot">
+                    <option value="">Select</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
